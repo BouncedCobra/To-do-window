@@ -7,16 +7,16 @@ def entertask():
     def add():
         input_text=entry_task.get(1.0, "end-1c")
         if input_text=="":
-            tkinter.messagebox.showwarning(title="Warning!",message="Please Enter some Text")
+            tkinter.messagebox.showwarning(title="Warning!",message="Ingresa algun texto")
         else:
             listbox_task.insert(END,input_text)
             #close the root1 window
             root1.destroy()
     root1=Tk()
-    root1.title("Add task")
+    root1.title("Agregar tarea")
     entry_task=Text(root1,width=40,height=4)
     entry_task.pack()
-    button_temp=Button(root1,text="Add task",command=add)
+    button_temp=Button(root1,text="Agregar tarea",command=add)
     button_temp.pack()
     root1.mainloop()
     
@@ -61,7 +61,7 @@ entry_button.pack(pady=3)
 delete_button=Button(window,text="Eliminar tarea seleccionada",width=50,command=deletetask)
 delete_button.pack(pady=3)
 
-mark_button=Button(window,text="Marcar como completada ",width=50,command=markcompleted)
+mark_button=Button(window,text="Marcar como completada",width=50,command=markcompleted)
 mark_button.pack(pady=3)
 
 
